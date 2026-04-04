@@ -1,0 +1,49 @@
+{
+  "name": "niewiaro-github-io",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "0.14.0",
+    "@nuxt/ui": "^4.6.0",
+    "@nuxtjs/i18n": "^10.2.4",
+    "@nuxtjs/seo": "4.0.2",
+    "@takumi-rs/core": "^0.73.1",
+    "@takumi-rs/wasm": "^0.73.1",
+    "nuxt": "^4.4.2",
+    "satori": "^0.26.0",
+    "tailwindcss": "^4.2.2",
+    "vue": "^3.5.31",
+    "vue-router": "^5.0.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "unrs-resolver",
+      "vue-demi"
+    ],
+    "overrides": {
+      "serialize-javascript": ">=7.0.3"
+    },
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "vue-router": "5"
+      }
+    }
+  },
+  "devDependencies": {
+    "@iconify-json/simple-icons": "^1.2.75",
+    "@nuxt/eslint": "1.15.2",
+    "eslint": "^10.1.0",
+    "typescript": "^5.9.3"
+  }
+}

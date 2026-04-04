@@ -1,0 +1,13 @@
+{
+    "seo": {
+      "title": "Python, Fullstack & Embedded Dev",
+      "description": "Tworzę automatyzacje w Python, aplikacje webowe (Python, Vue/Nuxt) oraz systemy embedded."
+    },
+    "i18n": {
+      "selectLanguage": "Wybierz język"
+    },
+    "hello-world": "Witaj Świecie!",
+    "homepage": {
+      "welcome": "Witaj w moim portfolio"
+    }
+}
