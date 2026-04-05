@@ -1,6 +1,6 @@
 const appName = "Czterej Pancerni i Piec";
 const appDescription = "Drużyna hackathonowa specjalizująca się w Embedded Systems, IoT i Robotyce.";
-const appUrl = "https://pancerni.niewiaro.cc";
+const appUrl = "https://pancerni.niewiaro.cc/";
 const gitProfileUrl = "https://github.com/Niewiaro";
 
 export default defineNuxtConfig({
@@ -67,4 +67,7 @@ export default defineNuxtConfig({
 		enabled: true,
 		zeroRuntime: true,
 	},
+	routeRules: {
+    '/': { prerender: true },
+  }
 });
