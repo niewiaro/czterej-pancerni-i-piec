@@ -1,72 +1,59 @@
 <script setup>
 defineProps({
-  colorMode: { type: String, required: false, default: "dark" },
-  title: { type: String, required: false, default: "Documentation" },
-  description: { type: String, required: false, default: "Comprehensive documentation for your project" },
-  icon: { type: String, required: false },
-  primaryColor: { type: String, required: false, default: "hsla(83.46, 55.19%, 47.25%, 0.3)" },
-  primaryTextColor: { type: String, required: false, default: "hsl(85.45, 33%, 60.78%)" },
-  site: { type: String, required: false, default: "Docs" }
+	title: { type: String, required: false, default: "Documentation" },
+	description: { type: String, required: false, default: "Comprehensive documentation for your project" },
+	primaryColor: { type: String, required: false, default: "hsla(83.46, 55.19%, 47.25%, 0.3)" },
+	primaryTextColor: { type: String, required: false, default: "hsl(85.45, 33%, 60.78%)" },
 });
 </script>
 
 <template>
-  <div
-    class="w-full h-full relative flex flex-col overflow-hidden bg-white text-neutral-900 dark:bg-neutral-950 dark:text-white"
-    :style="{
-  backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, transparent)`
-}"
-  >
-    <div class="flex flex-col w-full h-full p-[60px] relative justify-between">
-      <div class="flex flex-col gap-8 mb-10" style="text-wrap: pretty;">
-        <span
-          class="text-[72px] font-extrabold"
-          style="line-height: 1.1; letter-spacing: -0.04em;"
-        >
-          {{ title }}
-        </span>
-        <span
-          class="text-[44px] font-normal text-neutral-500 dark:text-neutral-400"
-          style="line-height: 1.4; max-width: 95%; letter-spacing: -0.01em; line-clamp: 2; text-overflow: ellipsis; overflow: hidden;"
-        >
-          {{ description }}
-        </span>
-      </div>
+	<div
+		class="w-full h-full relative flex flex-col overflow-hidden bg-neutral-950 text-white"
+		:style="{
+			backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, transparent)`,
+		}"
+	>
+		<div class="flex flex-col w-full h-full px-20 py-16 relative justify-center items-center text-center">
+			<div
+				class="flex flex-col items-center gap-8 mb-14"
+				style="width: 1000px; max-width: 1000px;"
+			>
+				<div
+					class="text-[74px] font-extrabold"
+					style="line-height: 1.1; letter-spacing: -0.04em; width: 100%;"
+				>
+					<span class="block w-full text-center">{{ title }}</span>
+				</div>
 
-      <div class="flex items-center gap-7">
-        <img
-          v-if="icon"
-          :src="icon"
-          alt="Icon"
-          class="w-16 h-16"
-          style="object-fit: contain;"
-        >
-        <span
-          class="text-[32px] font-bold"
-          style="letter-spacing: -0.02em; opacity: 0.9;"
-        >
-          {{ site }}
-        </span>
-        <div style="flex-grow: 1;" />
-        <div
-          :style="{
-  height: '4px',
-  width: '60px',
-  backgroundColor: primaryColor,
-  borderRadius: '2px'
-}"
-        />
-        <span
-          class="text-[22px] font-bold uppercase"
-          :style="{
-  letterSpacing: '0.2em',
-  color: primaryTextColor,
-  opacity: 0.8
-}"
-        >
-          Documentation
-        </span>
-      </div>
-    </div>
-  </div>
+				<div
+					class="text-[30px] font-normal text-neutral-400"
+					style="line-height: 1.3; width: 850px; letter-spacing: -0.01em;"
+				>
+					{{ description }}
+				</div>
+			</div>
+
+			<div class="flex flex-col items-center gap-6">
+				<div
+					:style="{
+						height: '4px',
+						width: '80px',
+						backgroundColor: primaryColor,
+						borderRadius: '2px',
+					}"
+				/>
+				<div
+					class="text-[28px] font-bold font-mono"
+					:style="{
+						letterSpacing: '0.15em',
+						color: primaryTextColor,
+						opacity: 0.9,
+					}"
+				>
+					&gt;_ hardware_team_ready
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
