@@ -15,22 +15,18 @@ useHead(() => ({
 	meta: [...(i18nHead.value.meta || [])],
 }));
 
-useSeoMeta({
-	titleTemplate: "%s | Niewiaro",
-});
-
 useSchemaOrg([
 	defineWebSite({
-		name: "Niewiaro Portfolio",
+		name: config.public.appName,
 	}),
 	defineWebPage(),
-	definePerson({
-		name: "Jakub Niewiarowski",
-		jobTitle: "Python, Fullstack & Embedded Developer",
+	defineOrganization({
+		name: config.public.appName,
+		description: config.public.appDescription,
+		logo: `${config.public.appURL}/web-app-manifest-512x512.png`,
 		url: config.public.appURL,
 		sameAs: [
-			config.public.gitURL,
-			config.public.linkedInURL,
+			config.public.gitRepoURL,
 		],
 	}),
 ]);
@@ -41,7 +37,7 @@ useSchemaOrg([
 		<NuxtAnnouncer />
 		<NuxtRouteAnnouncer />
 
-		<NuxtLoadingIndicator />
+		<NuxtLoadingIndicator color="#f97316" />
 
 		<NuxtLayout>
 			<NuxtPage />

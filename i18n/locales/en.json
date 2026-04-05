@@ -1,13 +1,19 @@
 {
     "seo": {
-        "title": "Python, Fullstack & Embedded Dev",
-        "description": "I build Python automation, modern web applications (Python, Vue/Nuxt) and embedded systems."
+        "title": "Czterej Pancerni i Piec | Hackathon Team",
+        "description": "We are an award-winning hackathon team specializing in embedded systems, IoT, and robotics."
+    },
+    "og": {
+        "title": "Czterej Pancerni i Piec",
+        "description": "IoT projects, embedded systems, and winning prototypes. Meet the Czterej Pancerni i Piec team."
     },
     "i18n": {
         "selectLanguage": "Select language"
     },
     "hello-world": "Hello World!",
     "homepage": {
-        "welcome": "Welcome to my portfolio"
+        "welcome": "Hackathons & Hardware Competitions",
+        "title": "Czterej Pancerni i Piec",
+        "description": "We build embedded systems, IoT software, and robots that win nationwide hackathons."
     }
 }

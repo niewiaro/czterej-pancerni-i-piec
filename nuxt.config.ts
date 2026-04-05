@@ -1,5 +1,6 @@
-const appName = "Niewiaro";
-const appUrl = "https://niewiaro.github.io";
+const appName = "Czterej Pancerni i Piec";
+const appDescription = "Drużyna hackathonowa specjalizująca się w Embedded Systems, IoT i Robotyce.";
+const appUrl = "https://pancerni.niewiaro.cc";
 const gitProfileUrl = "https://github.com/Niewiaro";
 
 export default defineNuxtConfig({
@@ -15,7 +16,7 @@ export default defineNuxtConfig({
 	site: {
 		url: appUrl,
 		name: appName,
-		description: "Python, Fullstack & Embedded Developer Portfolio",
+		description: appDescription,
 		defaultLocale: "pl",
 		indexable: true,
 		trailingSlash: true,
@@ -23,15 +24,16 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			appName: appName,
+			appDescription: appDescription,
 			author: "Jakub Niewiarowski",
 			environment: "prod",
 			appURL: appUrl,
 			gitURL: gitProfileUrl,
-			gitRepoURL: `${gitProfileUrl}/niewiaro.github.io`,
+			gitRepoURL: `${gitProfileUrl}/czterej-pancerni-i-piec`,
 			linkedInURL: "https://www.linkedin.com/in/jakub-niewiarowski/",
 		},
 	},
-	compatibilityDate: "2025-07-15",
+	compatibilityDate: "2026-04-05",
 	eslint: {
 		config: {
 			stylistic: {
@@ -58,5 +60,6 @@ export default defineNuxtConfig({
 	},
 	ogImage: {
 		enabled: true,
+		zeroRuntime: true,
 	},
 });

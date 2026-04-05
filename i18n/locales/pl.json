@@ -1,13 +1,19 @@
 {
-    "seo": {
-      "title": "Python, Fullstack & Embedded Dev",
-      "description": "Tworzę automatyzacje w Python, aplikacje webowe (Python, Vue/Nuxt) oraz systemy embedded."
-    },
-    "i18n": {
-      "selectLanguage": "Wybierz język"
-    },
-    "hello-world": "Witaj Świecie!",
-    "homepage": {
-      "welcome": "Witaj w moim portfolio"
-    }
+  "seo": {
+    "title": "Czterej Pancerni i Piec | Drużyna Hackathonowa",
+    "description": "Jesteśmy wielokrotnie nagradzaną drużyną hackathonową specjalizującą się w systemach wbudowanych, IoT oraz robotyce."
+  },
+  "og": {
+    "title": "Czterej Pancerni i Piec",
+    "description": "Projekty IoT, systemy wbudowane i zwycięskie prototypy. Poznaj drużynę Czterej Pancerni i Piec."
+  },
+  "i18n": {
+    "selectLanguage": "Wybierz język"
+  },
+  "hello-world": "Witaj Świecie!",
+  "homepage": {
+    "welcome": "Hackathons & Hardware Competitions",
+    "title": "Czterej Pancerni i Piec",
+    "description": "Budujemy systemy wbudowane, oprogramowanie IoT i roboty, które wygrywają ogólnopolskie hackathony."
+  }
 }
