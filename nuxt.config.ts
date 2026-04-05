@@ -34,6 +34,11 @@ export default defineNuxtConfig({
 		},
 	},
 	compatibilityDate: "2026-04-05",
+	nitro: {
+		prerender: {
+			autoSubfolderIndex: false,
+		},
+	},
 	eslint: {
 		config: {
 			stylistic: {
