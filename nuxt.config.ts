@@ -13,6 +13,7 @@ export default defineNuxtConfig({
 	],
 	devtools: { enabled: true },
 	css: ["~/assets/css/main.css"],
+
 	site: {
 		url: appUrl,
 		name: appName,
@@ -21,6 +22,7 @@ export default defineNuxtConfig({
 		indexable: true,
 		trailingSlash: true,
 	},
+
 	runtimeConfig: {
 		public: {
 			appName: appName,
@@ -33,12 +35,9 @@ export default defineNuxtConfig({
 			linkedInURL: "https://www.linkedin.com/in/jakub-niewiarowski/",
 		},
 	},
-	compatibilityDate: "2026-04-05",
-	nitro: {
-		prerender: {
-			autoSubfolderIndex: false,
-		},
-	},
+
+	compatibilityDate: "2024-05-04",
+
 	eslint: {
 		config: {
 			stylistic: {
@@ -49,11 +48,15 @@ export default defineNuxtConfig({
 			},
 		},
 	},
+
 	fonts: {
 		families: [
-			{ name: "Inter", weights: [400, 700], global: true },
+			{ name: "Inter", weights: [400, 500], global: true },
+			{ name: "Montserrat", weights: [700, 800, 900], global: true },
+			{ name: "JetBrains Mono", weights: [400, 700], global: true },
 		],
 	},
+
 	i18n: {
 		baseUrl: appUrl,
 		locales: [
@@ -63,11 +66,4 @@ export default defineNuxtConfig({
 		defaultLocale: "pl",
 		strategy: "prefix_and_default",
 	},
-	ogImage: {
-		enabled: true,
-		zeroRuntime: true,
-	},
-	routeRules: {
-    '/': { prerender: true },
-  }
 });

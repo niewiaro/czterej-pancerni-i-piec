@@ -21,6 +21,7 @@ const config = useRuntimeConfig();
 				variant="ghost"
 				:to="config.public.gitURL"
 				target="_blank"
+				rel="noopener noreferrer"
 				aria-label="GitHub"
 			/>
 			<UButton
@@ -29,6 +30,7 @@ const config = useRuntimeConfig();
 				variant="ghost"
 				:to="config.public.linkedInURL"
 				target="_blank"
+				rel="noopener noreferrer"
 				aria-label="LinkedIn"
 			/>
 		</template>

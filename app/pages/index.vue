@@ -4,16 +4,24 @@ const { t } = useI18n();
 
 useSeoMeta({
 	description: () => t("seo.description"),
-	ogTitle: () => t("seo.title"),
-	ogDescription: () => t("seo.description"),
+	// ogTitle: () => t("seo.title"),
+	// ogDescription: () => t("seo.description"),
 	author: config.public.author,
 	themeColor: "#121212",
 });
 
-defineOgImage("Docs.takumi", {
-	title: () => t("og.title"),
-	description: () => t("og.description"),
-});
+const techIcons = [
+	"i-simple-icons-python",
+	"i-simple-icons-fastapi",
+	"i-simple-icons-django",
+	"i-simple-icons-javascript",
+	"i-simple-icons-vuedotjs",
+	"i-simple-icons-nuxtdotjs",
+	"i-simple-icons-cplusplus",
+	"i-simple-icons-platformio",
+	"i-simple-icons-arduino",
+	"i-simple-icons-espressif",
+];
 </script>
 
 <template>
@@ -30,43 +38,9 @@ defineOgImage("Docs.takumi", {
 					class="py-10"
 				>
 					<UIcon
-						name="i-simple-icons-python"
-						class="size-10 shrink-0 mr-8"
-					/>
-					<UIcon
-						name="i-simple-icons-fastapi"
-						class="size-10 shrink-0 mr-8"
-					/>
-					<UIcon
-						name="i-simple-icons-django"
-						class="size-10 shrink-0 mr-8"
-					/>
-					<UIcon
-						name="i-simple-icons-javascript"
-						class="size-10 shrink-0 mr-8"
-					/>
-					<UIcon
-						name="i-simple-icons-vuedotjs"
-						class="size-10 shrink-0 mr-8"
-					/>
-					<UIcon
-						name="i-simple-icons-nuxtdotjs"
-						class="size-10 shrink-0 mr-8"
-					/>
-					<UIcon
-						name="i-simple-icons-cplusplus"
-						class="size-10 shrink-0 mr-8"
-					/>
-					<UIcon
-						name="i-simple-icons-platformio"
-						class="size-10 shrink-0 mr-8"
-					/>
-					<UIcon
-						name="i-simple-icons-arduino"
-						class="size-10 shrink-0 mr-8"
-					/>
-					<UIcon
-						name="i-simple-icons-espressif"
+						v-for="icon in techIcons"
+						:key="icon"
+						:name="icon"
 						class="size-10 shrink-0 mr-8"
 					/>
 				</UMarquee>
