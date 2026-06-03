@@ -70,11 +70,11 @@
     "timespanHeader": "// Zdobycze w czasie",
     "loading": "[ Ładowanie zbrojowni... ]",
     "datasets": {
-      "powerbanks": "🔋 Powerbanki",
-      "legos": "🧱 Zestawy LEGO",
-      "headphones": "🎧 Słuchawki",
-      "keyboards": "⌨️ Klawiatury",
-      "mice": "🖱️ Myszki"
+      "powerbanks": "Powerbanki",
+      "legos": "Zestawy LEGO",
+      "headphones": "Słuchawki",
+      "keyboards": "Klawiatury",
+      "mice": "Myszki"
     }
   },
   "achievements": {
@@ -83,28 +83,28 @@
     "repoLink": "Zobacz repozytorium",
     "items": {
       "item1": {
-        "place": "🥇 1. MIEJSCE",
+        "place": "1. MIEJSCE",
         "date": "Lis 22, 2025 // Kraków",
         "title": "Mechaton AGH",
         "category": "Robotics Category // WRSS WIMIR AGH",
         "description": "Projekt: Programowanie robota przemysłowego ASTOR do zadań precyzyjnych."
       },
       "item2": {
-        "place": "🥇 1. MIEJSCE",
+        "place": "1. MIEJSCE",
         "date": "Kwi 26, 2025 // Kraków",
         "title": "RCDC 2025",
         "category": "Remote Car Development // BEST AGH",
         "description": "Zbudowanie zdalnie sterowanego pojazdu z surowych komponentów i wygrana wyścigu na dedykowanym torze."
       },
       "item3": {
-        "place": "🥉 3. MIEJSCE",
+        "place": "3. MIEJSCE",
         "date": "Kwi 18-19, 2026 (24h) // Kraków",
         "title": "Hacknarök 2026",
         "category": "AIoT - Vikings' Smart City // eeStec AGH",
         "description": "Model miasta wykorzystujący systemy LED i serwomechanizmy, chroniący mieszkańców przed \"kaprysami\" nordyckich bogów."
       },
       "item4": {
-        "place": "🥉 3. MIEJSCE",
+        "place": "3. MIEJSCE",
         "date": "Lis 29-30, 2025 (24h) // Warszawa",
         "title": "11th BEST Hacking League",
         "category": "Hardware - Eco-innovations // BEST Warsaw",
