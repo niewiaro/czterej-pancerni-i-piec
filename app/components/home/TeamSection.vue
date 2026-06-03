@@ -8,7 +8,7 @@ const team = [
 		name: t("team.items.item1.name"),
 		role: t("team.items.item1.role"),
 		description: t("team.items.item1.description"),
-		linkedin: config.public.linkedInURL,
+		linkedin: "https://www.linkedin.com/in/igor-janiszewski/",
 		avatar: "",
 	},
 	{
@@ -16,7 +16,7 @@ const team = [
 		name: t("team.items.item2.name"),
 		role: t("team.items.item2.role"),
 		description: t("team.items.item2.description"),
-		linkedin: "https://www.linkedin.com/in/kamila-karasi%C5%84ska-6a2b36360/",
+		linkedin: "https://www.linkedin.com/in/kamila-karasinska/",
 		avatar: "",
 	},
 	{
