@@ -1,2 +1,67 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+@theme static {
+    /* Furnace "Primary" */
+    --color-furnace-50: #fff3ee;
+    --color-furnace-100: #ffe4d5;
+    --color-furnace-200: #fecbaf;
+    --color-furnace-300: #fea67e;
+    --color-furnace-400: #fe7545;
+    --color-furnace-500: #ff5722;
+    --color-furnace-600: #ef3b07;
+    --color-furnace-700: #c62a08;
+    --color-furnace-800: #9d230f;
+    --color-furnace-900: #7e2010;
+    --color-furnace-950: #440d06;
+
+    /* Carbon "Neutral" */
+    --color-carbon-50: #f6f6f6;
+    --color-carbon-100: #e7e7e8;
+    --color-carbon-200: #d1d1d3;
+    --color-carbon-300: #b0b0b4;
+    --color-carbon-400: #88888d;
+    --color-carbon-500: #64646a;
+    --color-carbon-600: #4f4f54;
+    --color-carbon-700: #404044;
+    --color-carbon-800: #353538;
+    --color-carbon-900: #1a1a1d;
+    --color-carbon-950: #111113;
+
+    /* Steel "Secondary" */
+    --color-steel-50: #f4f6f6;
+    --color-steel-100: #e5e9e9;
+    --color-steel-200: #ccd5d6;
+    --color-steel-300: #a7b7b8;
+    --color-steel-400: #95a5a6;
+    --color-steel-500: #627b7c;
+    --color-steel-600: #4e6364;
+    --color-steel-700: #415253;
+    --color-steel-800: #374445;
+    --color-steel-900: #303a3a;
+    --color-steel-950: #1d2525;
+}
+
+@layer base {
+    body {
+        @apply bg-neutral-900 text-neutral-200 antialiased selection:bg-primary-500 selection:text-white;
+    }
+    
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+.glow-primary {
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.4);
+}
+.text-glow-primary {
+    text-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+}
+
+.bg-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}

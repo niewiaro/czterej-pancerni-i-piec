@@ -1,39 +1,39 @@
 <script setup lang="ts">
-const config = useRuntimeConfig();
+import * as locales from "@nuxt/ui/locale";
+
+const { locale } = useI18n();
 const i18nHead = useLocaleHead({
 	seo: true,
 });
 
+const lang = computed(() => i18nHead.value.htmlAttrs?.lang || "pl");
+const dir = computed(() => locales[locale.value as keyof typeof locales]?.dir || "ltr");
+
 useHead(() => ({
 	htmlAttrs: {
-		lang: i18nHead.value.htmlAttrs!.lang,
+		lang: lang.value,
+		dir: dir.value,
+		class: "dark",
+		style: "color-scheme: dark;",
 	},
 	link: [
 		...(i18nHead.value.link || []),
-		{ rel: "manifest", href: "/site.webmanifest" },
+		{ rel: "icon", type: "image/png", href: "/favicon-96x96.png?v=20260603", sizes: "96x96" },
+		{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg?v=20260603" },
+		{ rel: "shortcut icon", href: "/favicon.ico?v=20260603" },
+		{ rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png?v=20260603" },
+		{ rel: "manifest", href: "/site.webmanifest?v=20260603" },
 	],
-	meta: [...(i18nHead.value.meta || [])],
+	meta: [
+		...(i18nHead.value.meta || []),
+		{ name: "apple-mobile-web-app-title", content: "4PIP" },
+		{ name: "theme-color", content: "#1A1A1D" },
+	],
 }));
-
-useSchemaOrg([
-	defineWebSite({
-		name: config.public.appName,
-	}),
-	defineWebPage(),
-	defineOrganization({
-		name: config.public.appName,
-		description: config.public.appDescription,
-		logo: `${config.public.appURL}/web-app-manifest-512x512.png`,
-		url: config.public.appURL,
-		sameAs: [
-			config.public.gitRepoURL,
-		],
-	}),
-]);
 </script>
 
 <template>
-	<UApp>
+	<UApp :locale="locales[locale as keyof typeof locales]">
 		<NuxtAnnouncer />
 		<NuxtRouteAnnouncer />
 

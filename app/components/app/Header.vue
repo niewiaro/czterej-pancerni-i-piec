@@ -7,12 +7,33 @@ const localePath = useLocalePath();
 const { t, locale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
 
-const items = computed<NavigationMenuItem[]>(() => [{
-	label: t("hello-world"),
-	icon: "i-mdi-cube-outline",
-	to: "https://helloworld.niewiaro.cc/",
-	target: "_blank",
-}]);
+const items = computed<NavigationMenuItem[]>(() => [
+	{
+		label: t("header.nav.about"),
+		to: "/#about",
+		icon: "i-heroicons-information-circle",
+	},
+	{
+		label: t("header.nav.stats"),
+		to: "/#stats",
+		icon: "i-heroicons-chart-pie",
+	},
+	{
+		label: t("header.nav.achievements"),
+		to: "/#achievements",
+		icon: "i-heroicons-trophy",
+	},
+	{
+		label: t("header.nav.team"),
+		to: "/#team",
+		icon: "i-heroicons-user-group",
+	},
+	{
+		label: t("header.nav.loot"),
+		to: "/#loot",
+		icon: "i-heroicons-cube-transparent",
+	},
+]);
 </script>
 
 <template>
@@ -20,21 +41,34 @@ const items = computed<NavigationMenuItem[]>(() => [{
 		<template #left>
 			<NuxtLink
 				:to="localePath('/')"
-				class="flex items-center"
+				class="flex items-center gap-3"
 			>
-				<UAvatar
-					src="/favicon.svg"
-					:alt="config.public.appName + ' Logo'"
-					size="md"
-					class="mr-2"
-				/>
-				<span class="font-bold text-lg">{{ config.public.appName }}</span>
+				<AppLogo class="w-10 h-10 text-primary-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(255,87,34,0.5)] transition-all duration-300" />
+
+				<div class="flex flex-col">
+					<span class="font-heading font-black text-xl tracking-wide uppercase text-white group-hover:text-primary-400 transition-colors">4 P i P</span>
+					<span class="text-secondary-400 text-[10px] font-mono">{{ config.public.appName }}</span>
+				</div>
 			</NuxtLink>
 		</template>
 
-		<UNavigationMenu :items="items" />
+		<UNavigationMenu
+			:items="items"
+			variant="link"
+			color="secondary"
+			class="hidden lg:flex font-mono"
+		/>
 
 		<template #right>
+			<UButton
+				:to="config.public.gitURL"
+				target="_blank"
+				icon="i-simple-icons-github"
+				color="neutral"
+				variant="ghost"
+				aria-label="GitHub Repository"
+				class="hover:text-primary-500 hover:bg-primary-500/10 transition-colors"
+			/>
 			<UDrawer>
 				<UButton
 					icon="i-lucide-languages"
@@ -71,15 +105,19 @@ const items = computed<NavigationMenuItem[]>(() => [{
 				</template>
 			</UDrawer>
 
-			<UColorModeButton />
+			<!-- <UColorModeButton /> -->
 		</template>
 
 		<template #body>
-			<UNavigationMenu
-				:items="items"
-				orientation="vertical"
-				class="-mx-2.5"
-			/>
+			<div class="p-6 flex flex-col gap-2 max-w-4xl mx-auto w-full">
+				<UNavigationMenu
+					:items="items"
+					orientation="vertical"
+					variant="link"
+					color="secondary"
+					class="-mx-2.5 mb-4 text-center [&_a]:text-lg [&_a]:font-semibold [&_button]:text-lg [&_button]:font-semibold font-mono"
+				/>
+			</div>
 		</template>
 	</UHeader>
 </template>

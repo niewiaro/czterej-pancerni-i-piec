@@ -9,12 +9,7 @@
         "class",
         "ui"
     ],
-    "tailwindCSS.experimental.classRegex": [
-        [
-            "ui:\\s*{([^)]*)\\s*}",
-            "(?:'|\"|`)([^']*)(?:'|\"|`)"
-        ]
-    ],
+    "tailwindCSS.classFunctions": ["defineAppConfig"],
     "cSpell.language": "en,pl",
     "cSpell.words": [
         "Nuxt"

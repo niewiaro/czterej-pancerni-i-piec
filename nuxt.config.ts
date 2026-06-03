@@ -8,20 +8,10 @@ export default defineNuxtConfig({
 		"@nuxt/ui",
 		"@nuxtjs/i18n",
 		"@nuxt/eslint",
-		"@nuxtjs/seo",
 		"@nuxt/fonts",
 	],
 	devtools: { enabled: true },
 	css: ["~/assets/css/main.css"],
-
-	site: {
-		url: appUrl,
-		name: appName,
-		description: appDescription,
-		defaultLocale: "pl",
-		indexable: true,
-		trailingSlash: true,
-	},
 
 	runtimeConfig: {
 		public: {
@@ -36,7 +26,7 @@ export default defineNuxtConfig({
 		},
 	},
 
-	compatibilityDate: "2024-05-04",
+	compatibilityDate: "2026-06-02",
 
 	eslint: {
 		config: {
@@ -49,21 +39,18 @@ export default defineNuxtConfig({
 		},
 	},
 
-	fonts: {
-		families: [
-			{ name: "Inter", weights: [400, 500], global: true },
-			{ name: "Montserrat", weights: [700, 800, 900], global: true },
-			{ name: "JetBrains Mono", weights: [400, 700], global: true },
-		],
-	},
-
 	i18n: {
 		baseUrl: appUrl,
 		locales: [
-			{ code: "pl", iso: "pl-PL", name: "Polski", file: "pl.json" },
-			{ code: "en", iso: "en-US", name: "English", file: "en.json" },
+			{ code: "pl", iso: "pl-PL", language: "pl", name: "Polski", file: "pl.json", dir: "ltr" },
+			{ code: "en", iso: "en-US", language: "en", name: "English", file: "en.json", dir: "ltr" },
 		],
 		defaultLocale: "pl",
-		strategy: "prefix_and_default",
+		strategy: "prefix_except_default",
+		detectBrowserLanguage: {
+			useCookie: true,
+			cookieKey: "i18n_redirected",
+			redirectOn: "root",
+		},
 	},
 });
